@@ -25,3 +25,30 @@
   display: inline-flex;
 }
 ```
+
+## 安装并编译项目
+
+```sh
+// 克隆项目
+git clone https://github.com/ZakaryCode/taro-flexbox.git
+
+// 进入项目目录
+cd taro-flexbox
+
+// 安装依赖
+yarn install
+
+// 编译项目
+yarn build
+```
+
+## 适配平台
+
+- [x] 微信小程序 weapp
+- [x] 智能小程序 swan
+- [x] 阿里小程序 alipay
+- [x] 头条小程序 tt 组件样式隔离适配
+- [x] h5
+- [ ] rn
+- [x] QQ轻应用 qq 组件样式隔离适配
+- [ ] 快应用 quickapp
