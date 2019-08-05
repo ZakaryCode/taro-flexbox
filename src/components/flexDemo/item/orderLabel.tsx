@@ -1,3 +1,4 @@
+import Taro from '@tarojs/taro';
 import { View } from "@tarojs/components";
 import { StandardProps } from "@tarojs/components/types/common";
 

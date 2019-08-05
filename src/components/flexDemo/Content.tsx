@@ -1,3 +1,4 @@
+import Taro from "@tarojs/taro";
 import { StandardProps } from "@tarojs/components/types/common";
 import FlexDirectionDemo from './container/flexDirectionDemo';
 import FlexWrapDemo from './container/flexWrapDemo';

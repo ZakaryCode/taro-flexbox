@@ -1,27 +1,39 @@
+import Taro from '@tarojs/taro';
 import { View, Text } from "@tarojs/components";
-import clnx from "../../../utils/clnx";
-import '../index.scss';
+import clnx from "classnames";
 
-export default (): JSX.Element => <View>
-  <View className={clnx(['demo-box'])}>
-    <View className={clnx(['demo-box-title'])}>默认: 0 1 auto (后两个属性可选) 该属性有两个快捷值: auto (1 1 auto) 和 none (0 0 auto) 建议优先使用这个属性，而不是单独写三个分离的属性，因为浏览器会推算相关值。</View>
-    <View className={clnx(['demo-box-container', 'demo-box-container-scroll'])}>
-      <View className={clnx(['demo-box-container-item', 'demo-box-container-itemW'])} style={{ flex: 'auto' }}>
-        <Text className={clnx(['demo-box-container-itemText'])}>auto</Text>
+function Flex(): JSX.Element {
+  return <View>
+    <View className={clnx(['margin_box', 'font-size_75'])}>
+      <View className={clnx(['padding1', 'yellow-bg2'])}>默认: 0 1 auto (后两个属性可选) 该属性有两个快捷值: auto (1 1 auto) 和 none (0 0 auto) 建议优先使用这个属性，而不是单独写三个分离的属性，因为浏览器会推算相关值。</View>
+      <View className={clnx(['flex', 'blue-bg3', 'padding_10', 'max-height15', 'scroll'])}>
+        <View className={clnx(['flex', 'flex-auto', 'height2', 'width4', 'borderW', 'blue-bg2', 'margin_10', 'align-center'])}>
+          <Text className={clnx([
+            'withe', 'font-size_75', 'line-height1', 'margin_auto', 'text_center'])}>auto</Text>
+        </View>
+        <View className={clnx(['flex', 'flex-auto', 'height2', 'width4', 'borderW', 'blue-bg2', 'margin_10', 'align-center'])}>
+          <Text className={clnx([
+            'withe', 'font-size_75', 'line-height1', 'margin_auto', 'text_center'])}>1 1 auto</Text>
+        </View>
       </View>
-      <View className={clnx(['demo-box-container-item', 'demo-box-container-itemW'])} style={{ flex: 'auto' }}>
-        <Text className={clnx(['demo-box-container-itemText'])}>1 1 auto</Text>
+    </View>
+    <View className={clnx(['margin_box', 'font-size_75'])}>
+      <View className={clnx(['flex', 'blue-bg3', 'padding_10', 'max-height15', 'scroll'])}>
+        <View className={clnx(['flex', 'flex-none', 'height2', 'width4', 'borderW', 'blue-bg2', 'margin_10', 'align-center'])}>
+          <Text className={clnx([
+            'withe', 'font-size_75', 'line-height1', 'margin_auto', 'text_center'])}>none</Text>
+        </View>
+        <View className={clnx(['flex', 'flex-none', 'height2', 'width4', 'borderW', 'blue-bg2', 'margin_10', 'align-center'])}>
+          <Text className={clnx([
+            'withe', 'font-size_75', 'line-height1', 'margin_auto', 'text_center'])}>0 0 auto</Text>
+        </View>
       </View>
     </View>
   </View>
-  <View className={clnx(['demo-box'])}>
-    <View className={clnx(['demo-box-container', 'demo-box-container-scroll'])}>
-      <View className={clnx(['demo-box-container-item', 'demo-box-container-itemW'])} style={{ flex: 'none' }}>
-        <Text className={clnx(['demo-box-container-itemText'])}>none</Text>
-      </View>
-      <View className={clnx(['demo-box-container-item', 'demo-box-container-itemW'])} style={{ flex: 'none' }}>
-        <Text className={clnx(['demo-box-container-itemText'])}>0 0 auto</Text>
-      </View>
-    </View>
-  </View>
-</View>
+}
+
+Flex.options = {
+  addGlobalClass: true,
+}
+
+export default Flex;

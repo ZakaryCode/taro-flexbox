@@ -1,27 +1,34 @@
+import Taro from '@tarojs/taro';
 import { View, Text } from "@tarojs/components";
 import { StandardProps } from "@tarojs/components/types/common";
 import { AlignContentProperty } from "csstype";
-import clnx from "../../../utils/clnx";
-import '../index.scss';
+import clnx from "classnames";
 
-export default function AlignContent (props: AlignContentProps): JSX.Element {
+function AlignContent (props: AlignContentProps): JSX.Element {
   const list = [
-    { class: ['pink-box', 'width4'] },
-    { class: ['green-box', 'width3'] },
-    { class: ['yellow-box', 'width5'] },
-    { class: ['green-box', 'width3'] },
-    { class: ['yellow-box', 'width5'] },
-    { class: ['green-box', 'width3'] },
-    { class: ['pink-box', 'width4'] }];
-  return <View className={clnx(['demo-box-container', 'min-height10'])} style={{
+    { class: ['pink-bg', 'width4'] },
+    { class: ['green-bg', 'width3'] },
+    { class: ['yellow-bg', 'width5'] },
+    { class: ['green-bg', 'width3'] },
+    { class: ['yellow-bg', 'width5'] },
+    { class: ['green-bg', 'width3'] },
+    { class: ['pink-bg', 'width4'] }];
+  return <View className={clnx(['flex', 'flex-wrap', 'blue-bg3', 'padding_10', 'min-height10'])} style={{
     alignContent: props.alignContent,
-    flexWrap: 'wrap',
   }}>
-    {list.map((e, i) => <View className={clnx(['demo-box-container-item'], e.class)}>
-      <Text className={clnx(['demo-box-container-itemText', 'demo-box-container-itemTextR'])}>{i * 1 + 1}</Text>
+    {list.map((e, i) => <View className={clnx([
+      'flex', 'height2', 'borderW', 'margin_10', 'align-center'], e.class)}>
+      <Text className={clnx([
+        'withe', 'font-size_75', 'line-height1', 'margin_auto', 'text_center', 'height1', 'width1', 'borderW', 'radius50'])}>{i * 1 + 1}</Text>
     </View>)}
   </View>
 }
+
+AlignContent.options = {
+  addGlobalClass: true,
+}
+
+export default AlignContent;
 
 export interface AlignContentProps extends StandardProps {
   alignContent: AlignContentProperty;

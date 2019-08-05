@@ -1,25 +1,31 @@
+import Taro from '@tarojs/taro';
 import { View, Text } from "@tarojs/components";
 import { StandardProps } from "@tarojs/components/types/common";
 import { AlignItemsProperty } from "csstype";
-import clnx from '../../../utils/clnx';
-import '../index.scss';
+import clnx from 'classnames';
 
-export default function AlignItems (props: AlignItemsProps): JSX.Element {
+function AlignItems (props: AlignItemsProps): JSX.Element {
   const list = [
-    { label: 1, class: ['pink-box', 'height4'] },
-    { label: 2, class: ['green-box', 'height3'] },
-    { label: 3, class: ['yellow-box', 'height5'] }];
-  return <View className={clnx(['demo-box-container', 'min-height6'])} style={{
+    { label: 1, class: ['pink-bg', 'height4'] },
+    { label: 2, class: ['green-bg', 'height3'] },
+    { label: 3, class: ['yellow-bg', 'height5'] }];
+  return <View className={clnx(['flex', 'blue-bg3', 'padding_10', 'min-height6'])} style={{
     alignItems: props.alignItems,
   }}>
-    {list.map(e => <View className={clnx(['demo-box-container-item'], e.class)}
-      style={props.alignItems === 'stretch' ? {
-        height: 'auto!important'
-    }: {}}>
-      <Text className={clnx(['demo-box-container-itemText', 'demo-box-container-itemTextR'])}>{e.label}</Text>
+    {list.map(e => <View className={clnx([
+      'flex', 'width2', 'borderW', 'margin_10', 'align-center',
+      props.alignItems === 'stretch' ? 'height_auto' : ''] , e.class)} >
+      <Text className={clnx([
+        'withe', 'font-size_75', 'line-height1', 'margin_auto', 'text_center', 'height1', 'width1', 'borderW', 'radius50'])}>{e.label}</Text>
     </View>)}
   </View>
 }
+
+AlignItems.options = {
+  addGlobalClass: true,
+}
+
+export default AlignItems;
 
 export interface AlignItemsProps extends StandardProps {
   alignItems: AlignItemsProperty;

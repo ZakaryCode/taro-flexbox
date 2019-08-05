@@ -1,33 +1,47 @@
+import Taro from '@tarojs/taro';
 import { View, Text } from "@tarojs/components";
-import clnx from "../../../utils/clnx";
-import '../index.scss';
+import clnx from "classnames";
 
-export default (): JSX.Element => <View>
-  <View className={clnx(['demo-box'])}>
-    <View className={clnx(['demo-box-title'])}>默认: auto 项目的本来大小 它可以设为跟width或height属性一样的值(比如350px)，则项目将占据固定空间。</View>
-    <View className={clnx(['demo-box-container', 'demo-box-container-scroll'])}>
-      <View className={clnx(['demo-box-container-item', 'demo-box-container-itemW'])} style={{ flexBasis: 'auto' }}>
-        <Text className={clnx(['demo-box-container-itemText'])}>auto</Text>
+function FlexBasis(): JSX.Element {
+  return <View>
+    <View className={clnx(['margin_box', 'font-size_75'])}>
+      <View className={clnx(['padding1', 'yellow-bg2'])}>默认: auto 项目的本来大小 它可以设为跟width或height属性一样的值(比如350px)，则项目将占据固定空间。</View>
+      <View className={clnx(['flex', 'blue-bg3', 'padding_10', 'max-height15', 'scroll'])}>
+        <View className={clnx(['flex', 'height2', 'width4', 'borderW', 'blue-bg2', 'margin_10', 'align-center'])} style={{ flexBasis: 'auto' }}>
+          <Text className={clnx([
+            'withe', 'font-size_75', 'line-height1', 'margin_auto', 'text_center'])}>auto</Text>
+        </View>
+        <View className={clnx(['flex', 'height2', 'width4', 'borderW', 'blue-bg2', 'margin_10', 'align-center'])} style={{ flexBasis: '25%' }}>
+          <Text className={clnx([
+            'withe', 'font-size_75', 'line-height1', 'margin_auto', 'text_center'])}>25%</Text>
+        </View>
+        <View className={clnx(['flex', 'height2', 'width4', 'borderW', 'blue-bg2', 'margin_10', 'align-center'])} style={{ flexBasis: '50%' }}>
+          <Text className={clnx([
+            'withe', 'font-size_75', 'line-height1', 'margin_auto', 'text_center'])}>50%</Text>
+        </View>
+        <View className={clnx(['flex', 'height2', 'width4', 'borderW', 'blue-bg2', 'margin_10', 'align-center'])} style={{ flexBasis: '75%' }}>
+          <Text className={clnx([
+            'withe', 'font-size_75', 'line-height1', 'margin_auto', 'text_center'])}>75%</Text>
+        </View>
       </View>
-      <View className={clnx(['demo-box-container-item', 'demo-box-container-itemW'])} style={{ flexBasis: '25%' }}>
-        <Text className={clnx(['demo-box-container-itemText'])}>25%</Text>
-      </View>
-      <View className={clnx(['demo-box-container-item', 'demo-box-container-itemW'])} style={{ flexBasis: '50%' }}>
-        <Text className={clnx(['demo-box-container-itemText'])}>50%</Text>
-      </View>
-      <View className={clnx(['demo-box-container-item', 'demo-box-container-itemW'])} style={{ flexBasis: '75%' }}>
-        <Text className={clnx(['demo-box-container-itemText'])}>75%</Text>
+    </View>
+    <View className={clnx(['margin_box', 'font-size_75'])}>
+      <View className={clnx(['flex', 'blue-bg3', 'padding_10', 'max-height15', 'scroll'])}>
+        <View className={clnx(['flex', 'height2', 'width4', 'borderW', 'blue-bg2', 'margin_10', 'align-center'])} style={{ flexBasis: 'auto' }}>
+          <Text className={clnx([
+            'withe', 'font-size_75', 'line-height1', 'margin_auto', 'text_center'])}>auto</Text>
+        </View>
+        <View className={clnx(['flex', 'height2', 'width4', 'borderW', 'blue-bg2', 'margin_10', 'align-center'])} style={{ flexBasis: '25%' }}>
+          <Text className={clnx([
+            'withe', 'font-size_75', 'line-height1', 'margin_auto', 'text_center'])}>25%</Text>
+        </View>
       </View>
     </View>
   </View>
-  <View className={clnx(['demo-box'])}>
-    <View className={clnx(['demo-box-container', 'demo-box-container-scroll'])}>
-      <View className={clnx(['demo-box-container-item', 'demo-box-container-itemW'])} style={{ flexBasis: 'auto' }}>
-        <Text className={clnx(['demo-box-container-itemText'])}>auto</Text>
-      </View>
-      <View className={clnx(['demo-box-container-item', 'demo-box-container-itemW'])} style={{ flexBasis: '25%' }}>
-        <Text className={clnx(['demo-box-container-itemText'])}>25%</Text>
-      </View>
-    </View>
-  </View>
-</View>
+}
+
+FlexBasis.options = {
+  addGlobalClass: true,
+}
+
+export default FlexBasis;

@@ -1,0 +1,15 @@
+$font-base: 40px;
+
+.font-size_75 {
+  font-size: $font-base * 0.75;
+}
+.font-size1 {
+  font-size: $font-base;
+}
+.font-size1_25 {
+  font-size: $font-base * 1.25;
+}
+
+.bolder {
+  font-weight: 700;
+}

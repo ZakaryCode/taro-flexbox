@@ -1,18 +1,12 @@
 .root {
   max-width: 850px;
-  margin: auto;
   .head {
-    display: flex;
     align-items: center;
     flex-direction: column;
     vertical-align: baseline;
     line-height: 90px;
     height: 90px;
     width: 100%;
-    font-weight: bolder;
-    background-color: #FFF;
-    box-shadow: 0 2px 4px #AAA;
-    position: sticky;
     top: -2px;
   }
   .body {
@@ -20,10 +14,9 @@
     // margin-bottom: 6px;
     font-size: 30px;
     text-indent: 60px;
-    background-color: #EFEFEF;
     .span {
       padding: 0 2px;
-      font-weight: bolder;
+      font-weight: 700;
     }
     .alert {
       color: orange;
