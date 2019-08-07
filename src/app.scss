@@ -3,10 +3,6 @@
 @import './asset/length.scss';
 @import './asset/font.scss';
 
-.sticky {
-  // position: sticky;
-}
-
 .z-index1 {
   z-index: 1;
 }
@@ -46,14 +42,11 @@
 }
 
 .borderW {
-  border: 1px #FFF solid;
+  border: 1px solid #FFF;
 }
 
 .text_center {
   text-align: center;
-}
-.radius50 {
-  // border-radius: 50%;
 }
 
 .scroll {

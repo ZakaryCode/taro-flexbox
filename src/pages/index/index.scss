@@ -1,25 +1,20 @@
 .root {
-  max-width: 850px;
-  .head {
-    align-items: center;
-    flex-direction: column;
-    vertical-align: baseline;
-    line-height: 90px;
-    height: 90px;
-    width: 100%;
-    top: -2px;
-  }
-  .body {
-    padding: 6px;
-    // margin-bottom: 6px;
-    font-size: 30px;
-    text-indent: 60px;
-    .span {
-      padding: 0 2px;
-      font-weight: 700;
-    }
-    .alert {
-      color: orange;
-    }
-  }
+  max-width: 1000px;
+}
+.head {
+  // vertical-align: baseline;
+  line-height: 90px;
+  height: 90px;
+  width: 100%;
+  top: -2px;
+}
+// .body {
+//   // margin-bottom: 6px;
+// }
+.span {
+  padding: 0 2px;
+  font-weight: 700;
+}
+.alert {
+  color: orange;
 }

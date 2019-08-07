@@ -36,7 +36,7 @@ const config = {
     module: {
       postcss: {
         autoprefixer: {
-          enable: true,
+          enable: process.env.TARO_ENV !== 'quickapp',
           config: {
             browsers: [
               'last 3 versions',

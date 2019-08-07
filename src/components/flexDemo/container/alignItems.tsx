@@ -12,11 +12,11 @@ function AlignItems (props: AlignItemsProps): JSX.Element {
   return <View className={clnx(['flex', 'blue-bg3', 'padding_10', 'min-height6'])} style={{
     alignItems: props.alignItems,
   }}>
-    {list.map(e => <View className={clnx([
+    {list.map((e, i) => <View key={`${i}`} className={clnx([
       'flex', 'width2', 'borderW', 'margin_10', 'align-center',
       props.alignItems === 'stretch' ? 'height_auto' : ''] , e.class)} >
       <Text className={clnx([
-        'withe', 'font-size_75', 'line-height1', 'margin_auto', 'text_center', 'height1', 'width1', 'borderW', 'radius50'])}>{e.label}</Text>
+        'white', 'font-size_75', 'line-height1', 'margin_auto', 'text_center', 'height1', 'width1', 'borderW', 'radius1'])}>{e.label}</Text>
     </View>)}
   </View>
 }

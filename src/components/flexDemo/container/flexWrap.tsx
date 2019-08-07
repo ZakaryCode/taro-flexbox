@@ -9,10 +9,10 @@ function FlexWrap (props: FlexWrapProps): JSX.Element {
   return <View className={clnx(['flex', 'blue-bg3', 'padding_10', 'max-height15', 'scroll'])} style={isBlock ? {} : {
     flexWrap: props.flexWrap,
   }}>
-    {list.map((_e, i) => <View className={clnx([
+    {list.map((_e, i) => <View key={`${i}`} className={clnx([
       'flex', 'height2', 'width2', 'borderW', 'blue-bg2', 'margin_10', 'align-center', 'padding_10', 'flex-shrink_0'])}>
       <Text className={clnx([
-        'withe', 'font-size_75', 'line-height1', 'margin_auto', 'text_center', 'height1', 'width1', 'borderW', 'radius50'])}>{i * 1 + 1}</Text>
+        'white', 'font-size_75', 'line-height1', 'margin_auto', 'text_center', 'height1', 'width1', 'borderW', 'radius1'])}>{i * 1 + 1}</Text>
     </View>)}
   </View>
 }

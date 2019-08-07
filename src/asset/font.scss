@@ -1,5 +1,9 @@
 $font-base: 40px;
 
+body {
+  line-height: $font-base;
+}
+
 .font-size_75 {
   font-size: $font-base * 0.75;
 }

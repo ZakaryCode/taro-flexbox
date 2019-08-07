@@ -6,6 +6,9 @@ $font-base: 40px;
 .width1 {
   width: $font-base;
 }
+.width1_5 {
+  width: $font-base * 1.5;
+}
 .width2 {
   width: $font-base * 2;
 }
@@ -35,6 +38,9 @@ $font-base: 40px;
 }
 .height_auto {
   height: auto !important;
+}
+.radius1 {
+  border-radius: $font-base;
 }
 .height1 {
   height:  $font-base;

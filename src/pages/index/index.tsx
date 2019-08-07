@@ -95,14 +95,30 @@ export default class Index extends Component {
     return (
       <View className={clnx(['root', 'margin_auto'])}>
         {process.env.TARO_ENV === 'h5' || process.env.TARO_ENV === 'alipay'? <View className={clnx([
-          'flex', 'sticky', 'box-shadow1', 'withe-bg', 'bolder', 'head'])}>
+          'flex', 'box-shadow1', 'white-bg', 'bolder', 'head', 'align-center', 'flex-column'])} style={{
+            position: 'sticky',
+          }}>
           <Text>FlexBox 布局</Text>
         </View> : undefined}
-        <View className={clnx(['body', 'gray-bgEF'])}>
-          <View>采用<Text className={clnx(['span', 'bolder'])}>Flex 布局</Text>的元素，称为<Text className={clnx(['span', 'bolder'])}>Flex 容器</Text>(flex container)。<Text className={clnx(['span', 'bolder'])}>Flex 容器</Text>的所有子元素自动成为容器成员，称为<Text className={clnx(['span', 'bolder'])}>Flex 项目</Text>(flex item)。</View>
-          <View><Text className={clnx(['span', 'bolder'])}>Flex 容器</Text>默认存在两根轴: 水平的主轴(main axis)和垂直的交叉轴(cross axis)。</View>
-          <View><Text className={clnx(['span', 'bolder'])}>Flex 项目</Text>默认沿主轴排列。主轴的开始位置(与边框的交叉点)叫做main start，结束位置叫做main end;交叉轴的开始位置叫做cross start，结束位置叫做cross end;单个项目占据的主轴空间叫做main size，占据的交叉轴空间叫做cross size。</View>
-          <View className={clnx(['alert'])}>注意，设为 Flex 布局以后，子元素的 *float* 、 *clear* 和 *vertical-align* 属性将失效。</View>
+        <View className={clnx(['padding_10', 'gray-bgEF', 'flex-column'])}>
+          <View>
+            <Text className={clnx(['font-size_75'])}>&emsp;&emsp;采用<Text className={clnx(['span', 'bolder'])}>Flex 布局</Text>的元素，称为<Text className={clnx(['span', 'bolder'])}>Flex 容器</Text>(flex container)。<Text className={clnx(['span', 'bolder'])}>Flex 容器</Text>的所有子元素自动成为容器成员，称为<Text className={clnx(['span', 'bolder'])}>Flex 项目</Text>(flex item)。</Text>
+          </View>
+          <View>
+            <Text className={clnx(['font-size_75'])}>&emsp;&emsp;
+              <Text className={clnx(['span', 'bolder'])}>Flex 容器</Text>默认存在两根轴: 水平的主轴(main axis)和垂直的交叉轴(cross axis)。
+            </Text>
+          </View>
+          <View>
+            <Text className={clnx(['font-size_75'])}>&emsp;&emsp;
+              <Text className={clnx(['span', 'bolder'])}>Flex 项目</Text>默认沿主轴排列。主轴的开始位置(与边框的交叉点)叫做main start，结束位置叫做main end;交叉轴的开始位置叫做cross start，结束位置叫做cross end;单个项目占据的主轴空间叫做main size，占据的交叉轴空间叫做cross size。
+            </Text>
+          </View>
+          <View>
+            <Text className={clnx(['font-size_75'])}>&emsp;&emsp;
+              <Text className={clnx(['alert'])}>注意，设为 Flex 布局以后，子元素的 *float* 、 *clear* 和 *vertical-align* 属性将失效。</Text>
+            </Text>
+          </View>
         </View>
         <Panel title='Flex Container 属性' list={containerList}/>
         <Panel title='Flex Item 属性' list={itemList}/>
