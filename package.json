@@ -53,8 +53,8 @@
     "classnames": "^2.2.6",
     "nerv-devtools": "^1.4.0",
     "nervjs": "^1.4.0",
-    "react": "16.3.1",
-    "react-native": "0.55.4",
+    "react": "16.8.6",
+    "react-native": "0.57.8",
     "redux": "^4.0.0",
     "tslib": "^1.8.0"
   },

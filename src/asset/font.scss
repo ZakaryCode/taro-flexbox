@@ -1,9 +1,5 @@
 $font-base: 40px;
 
-body {
-  line-height: $font-base;
-}
-
 .font-size_75 {
   font-size: $font-base * 0.75;
 }
@@ -12,6 +8,13 @@ body {
 }
 .font-size1_25 {
   font-size: $font-base * 1.25;
+}
+
+.line-height1 {
+  line-height:  $font-base;
+}
+.line-height2 {
+  line-height:  $font-base * 2;
 }
 
 .bolder {

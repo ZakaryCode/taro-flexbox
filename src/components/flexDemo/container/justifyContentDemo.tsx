@@ -2,6 +2,7 @@ import Taro from '@tarojs/taro';
 import { View, Text } from "@tarojs/components";
 import JustifyContent from "./justifyContent";
 import clnx from "classnames";
+import '../index.scss';
 
 function JustifyContentDemo(): JSX.Element {
   return <View>

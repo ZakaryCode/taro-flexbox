@@ -2,6 +2,7 @@ import Taro from '@tarojs/taro';
 import { View, Text } from "@tarojs/components";
 import AlignContent from "./alignContent";
 import clnx from "classnames";
+import '../index.scss';
 
 function AlignContentDemo (): JSX.Element {
   return <View>

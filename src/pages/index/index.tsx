@@ -1,9 +1,8 @@
 import Taro, { Component, Config } from '@tarojs/taro';
 import { View, Text } from '@tarojs/components';
-import './index.scss';
-
 import Panel from '../../components/flexDemo';
 import clnx from 'classnames';
+import './index.scss';
 
 
 export default class Index extends Component {
@@ -34,7 +33,7 @@ export default class Index extends Component {
         subtitle: '定义，如果一条轴线排不下，如何换行',
         contentName: 'FlexWrap',
       }, {
-        title: 'flex-flow',
+        title: 'flex-flow (RN/快应用 不支持)',
         subtitle: '是flex-direction属性和flex-wrap属性的简写形式，默认值为row nowrap',
         contentName: 'FlexFlow',
       }, {
@@ -53,7 +52,7 @@ export default class Index extends Component {
     ],
     itemList: [
       {
-        title: 'order',
+        title: 'order (RN 不支持)',
         subtitle: '定义 item 的排列顺序',
         contentName: 'Order',
       }, {
@@ -93,7 +92,7 @@ export default class Index extends Component {
   render () {
     const { containerList, itemList } = this.state;
     return (
-      <View className={clnx(['root', 'margin_auto'])}>
+      <View className={clnx(['max-width_root', 'margin_auto'], process.env.TARO_ENV === 'h5' ? ['line-height1'] : [])}>
         {process.env.TARO_ENV === 'h5' || process.env.TARO_ENV === 'alipay'? <View className={clnx([
           'flex', 'box-shadow1', 'white-bg', 'bolder', 'head', 'align-center', 'flex-column'])} style={{
             position: 'sticky',

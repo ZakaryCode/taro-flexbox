@@ -1,9 +1,16 @@
 import Taro from '@tarojs/taro';
 import { View, Text } from "@tarojs/components";
 import FlexFlow from "./flexFlow";
+import NotSupport from '../NotSupport';
 import clnx from "classnames";
+import '../index.scss';
 
 function FlexFlowDemo(): JSX.Element {
+  if (process.env.TARO_ENV === 'rn' || process.env.TARO_ENV === 'quickapp') {
+    return <View className={clnx(['margin_box'])}>
+      <NotSupport />
+    </View>;
+  }
   return <View>
     <View className={clnx(['margin_box'])}>
       <View className={clnx(['padding1', 'yellow-bg2'])}>

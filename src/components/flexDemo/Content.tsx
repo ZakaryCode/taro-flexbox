@@ -12,6 +12,7 @@ import FlexShrinkDemo from './item/flexShrink';
 import FlexBasisDemo from './item/flexBasis';
 import FlexDemo from './item/flex';
 import AlignSelfDemo from './item/alignSelf';
+import './index.scss';
 
 function PickContent({name}: ContentProps): JSX.Element {
   let Content: JSX.Element | null = null;

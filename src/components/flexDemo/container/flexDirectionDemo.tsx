@@ -2,6 +2,7 @@ import Taro from '@tarojs/taro';
 import { View, Text } from "@tarojs/components";
 import FlexDirection from './flexDirection';
 import clnx from "classnames";
+import '../index.scss';
 
 function FlexDirectionDemo(): JSX.Element {
   return <View>

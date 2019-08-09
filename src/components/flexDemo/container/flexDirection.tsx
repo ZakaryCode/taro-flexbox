@@ -3,6 +3,7 @@ import { View, Text } from "@tarojs/components";
 import { StandardProps } from "@tarojs/components/types/common";
 import { FlexDirectionProperty } from "csstype";
 import clnx from "classnames";
+import '../index.scss';
 
 function FlexDirection (props: FlexDirectionProps): JSX.Element {
   const list = [
@@ -16,7 +17,7 @@ function FlexDirection (props: FlexDirectionProps): JSX.Element {
     {list.map((e, i) => <View key={`${i}`} className={clnx([
       'flex', 'height2', 'width2', 'borderW', 'margin_10', 'align-center'], e.class)}>
       <Text className={clnx([
-        'white', 'font-size_75', 'line-height1', 'margin_auto', 'text_center', 'height1', 'width1', 'borderW', 'radius1'])}>
+        'white', 'font-size_75', 'line-height1', 'margin_auto', 'text_center', 'height1', 'width1'])}>
         {i * 1 + 1}
       </Text>
     </View>)}

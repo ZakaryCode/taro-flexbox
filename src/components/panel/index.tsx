@@ -2,6 +2,7 @@ import Taro from '@tarojs/taro';
 import { View } from "@tarojs/components";
 import { StandardProps } from "@tarojs/components/types/common";
 import clnx from 'classnames';
+import './index.scss';
 
 function Panel(props: PanelProps) {
   const classes = props.classes || {};

@@ -25,39 +25,39 @@
 //   flex-wrap: wrap-reverse;
 // }
 
-.flow-row-nowrap {
-  flex-flow: row nowrap;
-}
-.flow-row-wrap {
-  flex-flow: row wrap;
-}
+// .flow-row-nowrap {
+//   flex-flow: row nowrap;
+// }
+// .flow-row-wrap {
+//   flex-flow: row wrap;
+// }
 // .flow-row-reverse {
 //   flex-flow: row wrap-reverse;
 // }
-.flow-column-nowrap {
-  flex-flow: column nowrap;
-}
-.flow-column-wrap {
-  flex-flow: column wrap;
-}
+// .flow-column-nowrap {
+//   flex-flow: column nowrap;
+// }
+// .flow-column-wrap {
+//   flex-flow: column wrap;
+// }
 // .flow-wrap-reverse {
 //   flex-flow: column wrap-reverse;
 // }
-.flow-rowR-nowrap {
-  flex-flow: row-reverse nowrap;
-}
-.flow-rowR-wrap {
-  flex-flow: row-reverse wrap;
-}
+// .flow-rowR-nowrap {
+//   flex-flow: row-reverse nowrap;
+// }
+// .flow-rowR-wrap {
+//   flex-flow: row-reverse wrap;
+// }
 // .flow-rowR-reverse {
 //   flex-flow: row-reverse wrap-reverse;
 // }
-.flow-columnR-nowrap {
-  flex-flow: column-reverse nowrap;
-}
-.flow-columnR-wrap {
-  flex-flow: column-reverse wrap;
-}
+// .flow-columnR-nowrap {
+//   flex-flow: column-reverse nowrap;
+// }
+// .flow-columnR-wrap {
+//   flex-flow: column-reverse wrap;
+// }
 // .flow-columnR-reverse {
 //   flex-flow: column-reverse wrap-reverse;
 // }
@@ -90,9 +90,9 @@
 .align-center {
   align-items: center;
 }
-.align-baseline {
-  align-items: baseline;
-}
+// .align-baseline {
+//   align-items: baseline;
+// }
 
 .content-stretch {
   align-content: stretch;
@@ -117,12 +117,12 @@
   flex-shrink: 0;
 }
 
-.flex-auto {
-  flex: auto;
-}
-.flex-none {
-  flex: none;
-}
+// .flex-auto {
+//   flex: auto;
+// }
+// .flex-none {
+//   flex: none;
+// }
 
 .self-auto {
   align-self: auto;

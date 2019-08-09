@@ -1,7 +1,9 @@
 import Taro from '@tarojs/taro';
 import { View, Text } from "@tarojs/components";
 import FlexWrap from "./flexWrap";
+import NotSupport from '../NotSupport';
 import clnx from "classnames";
+import '../index.scss';
 
 function FlexWrapDemo(): JSX.Element {
   return <View>
@@ -15,11 +17,11 @@ function FlexWrapDemo(): JSX.Element {
       </View>
       <FlexWrap flexWrap='wrap' />
       <View className={clnx(['padding1', 'yellow-bg2'])}>
-        <Text className={clnx(['font-size_75'])}>wrap-reverse 换行，第一行在下方 （RN 不支持）</Text>
+        <Text className={clnx(['font-size_75'])}>wrap-reverse 换行，第一行在下方 (RN 不支持)</Text>
       </View>
       {process.env.TARO_ENV === 'rn' ?
-      <Text className={clnx(['font-size_75'])}>React Native 不支持该属性</Text> :
-      <FlexWrap flexWrap='wrap-reverse' />}
+        <NotSupport /> : <FlexWrap flexWrap='wrap-reverse' />
+      }
     </View>
   </View>
 }

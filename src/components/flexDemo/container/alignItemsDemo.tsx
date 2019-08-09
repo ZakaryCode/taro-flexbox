@@ -1,7 +1,10 @@
 import Taro from '@tarojs/taro';
 import { View, Text } from "@tarojs/components";
 import AlignItems from './alignItems';
+import NotSupport from '../NotSupport';
 import clnx from "classnames";
+import '../index.scss';
+
 function AlignItemsDemo (): JSX.Element {
   return <View>
     <View className={clnx(['margin_box'])}>
@@ -22,9 +25,11 @@ function AlignItemsDemo (): JSX.Element {
       </View>
       <AlignItems alignItems='center' />
       <View className={clnx(['padding1', 'yellow-bg2'])}>
-        <Text className={clnx(['font-size_75'])}>baseline 项目的第一行文字的基线对齐</Text>
+        <Text className={clnx(['font-size_75'])}>baseline 项目的第一行文字的基线对齐 (快应用 不支持)</Text>
       </View>
-      <AlignItems alignItems='baseline' />
+      {process.env.TARO_ENV === 'quickapp' ?
+        <NotSupport /> : <AlignItems alignItems='baseline' />
+      }
     </View>
   </View>
 }
